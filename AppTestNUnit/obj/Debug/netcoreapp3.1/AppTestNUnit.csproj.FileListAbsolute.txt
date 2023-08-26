@@ -1,0 +1,13 @@
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.exe
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.deps.json
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.runtimeconfig.json
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.runtimeconfig.dev.json
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.dll
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\bin\Debug\netcoreapp3.1\AppTestNUnit.pdb
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.AssemblyInfoInputs.cache
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.AssemblyInfo.cs
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.csproj.CoreCompileInputs.cache
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.dll
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.pdb
+C:\Users\andrei\source\repos\MyProjects\ConsoleAppTestNUnit\AppTestNUnit\obj\Debug\netcoreapp3.1\AppTestNUnit.genruntimeconfig.cache
