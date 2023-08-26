@@ -6,5 +6,9 @@ A -> Act = Onde executa a acção do teste
 A -> Assert = Onde verificar se o teste executou corretamente
 
 
-- Sempre usar [Test] encima da metodo para poder rodar os testes.
 - Os metodos de teste sempre seram void e publicos.
+
+
+
+CODE COVERAGE 
+Verifica se seu código está sendo todo testado, aparece como vermelho o que está sem a cobertura para o teste, e verde o que está sendo testado pela classe de teste.

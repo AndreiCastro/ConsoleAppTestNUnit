@@ -9,7 +9,7 @@ namespace TestProjectNUnit
     public class ContaTeste
     {
         Conta conta;
-
+        
         #region SetUp TearDown
         /*Atributo [SetUp] no metodo, sempre será executado antes de cada metodo que tenha o 
          atributo [Test] da classe de testes.
@@ -19,7 +19,7 @@ namespace TestProjectNUnit
         [SetUp]
         public void Setup()
         {
-            conta = new Conta("0001", 200);
+            conta = new Conta("0001", 300);
         }
 
         [TearDown]
@@ -45,24 +45,6 @@ namespace TestProjectNUnit
         }
         #endregion OneTime
 
-        #region Ignore
-        /*O Atributo Ignore serve pra ignorar o teste, e a mensagem é exibida no Test Explorer tbm 
-         pode ser usado esse atributo no começo da classe, ai ira ignorar todos os teste da class*/
-        [Test]
-        [Ignore("Este metodo está sendo ignorado para testes")]
-        public void IgnorarTeste()
-        {
-            //Arrange
-            //var conta = new Conta("0001", 200);
-
-            //Act
-            bool retornoConta = conta.Sacar(0);
-            //Assert
-            Assert.IsTrue(retornoConta);
-        }
-        #endregion Ignore
-
-
         /*Sempre que for realizar um teste, tem que add o atributo [Test] para que acontece o teste
           
         [Category] serve para agrupar os testes
@@ -78,7 +60,7 @@ namespace TestProjectNUnit
             //Act (Action)
             bool retornoConta = conta.Sacar(300);
             //Assert
-            Assert.IsFalse(retornoConta);
+            Assert.IsTrue(retornoConta);
         }
 
         [Test]
@@ -104,6 +86,46 @@ namespace TestProjectNUnit
             Assert.IsFalse(retornoConta);
         }
 
+        #region Ignore
+        /*O Atributo Ignore serve pra ignorar o teste, e a mensagem é exibida no Test Explorer tbm 
+         pode ser usado esse atributo no começo da classe, ai ira ignorar todos os teste da class*/
+        [Test]
+        [Ignore("Este metodo está sendo ignorado para testes")]
+        [Category("Ignore")]
+        public void IgnorarTeste()
+        {
+            //Arrange
+            //var conta = new Conta("0001", 200);
+
+            //Act
+            bool retornoConta = conta.Sacar(0);
+            //Assert
+            Assert.IsTrue(retornoConta);
+        }
+        #endregion Ignore
+
+        #region TestCase
+        /*[TestCase] Serve para definir os atributos que irá passar para teste.
+         Pode declarar varias vezes e passar mais de um atributo. 
+         Nos testes abaixo fiz todos retornarem positivos, pois o saque não pode ser zerado, 
+         e o valor deve ser abaixo de 300 (defi esse valor no SetUp)
+        */
+        [Test]
+        [TestCase(0, false)]
+        [TestCase(100, true)]
+        [TestCase(200, true)]
+        [TestCase(400, false)]
+
+        [Category("Teste Case")]
+        public void TestCase(int valor, bool resultado)
+        {
+            //Act
+            bool retornoConta = conta.Sacar(valor);
+            //Assert
+            Assert.IsTrue(retornoConta == resultado);
+        }
+        #endregion TestCase
+
         #region Assert
         /*Metodos Assert
         .Istrue() -               Verifica se é true
@@ -117,5 +139,19 @@ namespace TestProjectNUnit
         .Ignore() -               Ignora o teste também 
          */
         #endregion Assert
+
+        #region Atributos
+        /*
+        [Test]
+        [SetUp]
+        [TearDown]
+        [SetUpOneTime]
+        [TearDownOneTime]
+        [Category("Descrição para Categoria")]
+        [Ignore("Ignore Teste")]
+        [TestCase(10)] ou [TestCase(10,50,60)] ou [TestCase(10,"string",bool)]
+        [TimeOut] - Serve para verificar timeout do teste
+         */
+        #endregion Atributos
     }
 }
