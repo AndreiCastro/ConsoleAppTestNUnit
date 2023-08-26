@@ -1,9 +1,10 @@
 TDD
 
 Todo teste tem a padrão AAA
-
 A -> Arrange = Onde vc prepara os dados para o testes
-
 A -> Act = Onde executa a acção do teste
-
 A -> Assert = Onde verificar se o teste executou corretamente
+
+
+- Sempre usar [Test] encima da metodo para poder rodar os testes.
+- Os metodos de teste sempre seram void e publicos.

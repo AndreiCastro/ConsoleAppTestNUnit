@@ -18,8 +18,16 @@
             return saldo;
         }
 
+        public void Depositar(decimal valor)
+        {
+            saldo += valor;
+        }
+
         public bool Sacar(decimal valor)
         {
+            if(valor < 1)
+                return false;
+
             if(saldo < valor)
                 return false;
 
