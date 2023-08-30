@@ -6,7 +6,7 @@ namespace TestProjectNUnit
 {
     /*Com o atributo TestFixture informa que a classe será uma classe de TESTE*/
     [TestFixture]
-    public class ContaTeste
+    public class ContaTest
     {
         Conta conta;
         
@@ -115,7 +115,6 @@ namespace TestProjectNUnit
         [TestCase(100, true)]
         [TestCase(200, true)]
         [TestCase(400, false)]
-
         [Category("Teste Case")]
         public void TestCase(int valor, bool resultado)
         {

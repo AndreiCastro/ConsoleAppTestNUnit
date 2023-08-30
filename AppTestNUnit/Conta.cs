@@ -5,6 +5,7 @@
         #region Atribuitos
         private string cpf;
         private decimal saldo;
+        private IValidadorCredito validadorCredito;
         #endregion Atribuitos
 
         public Conta(string _cpf, decimal _valor)
@@ -33,6 +34,27 @@
 
             saldo -= valor;
             return true;
+        }
+
+        //Injeção de Dependencia
+        public void SetValidadorCredito(IValidadorCredito _validadorCredito)
+        {
+            validadorCredito = _validadorCredito;
+        }
+
+        public bool SolicitarEmprestimo(decimal valor)
+        {
+            bool resultadoValidadorCredito = validadorCredito.ValidarCredito(cpf, valor);
+
+            if (resultadoValidadorCredito)
+                saldo += valor;
+
+            return resultadoValidadorCredito;
+        }
+
+        public decimal GetSaldo()
+        {
+            return saldo;
         }
     }
 }
