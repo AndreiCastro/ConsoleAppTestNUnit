@@ -31,17 +31,16 @@ namespace TesteProjectNUnitMock
              pois estou dizendo que os parametros devem ser esses.
              - No Moq existem o Matching Arguments, que digo se qualquer valor for passado o retorno
              do mock será positivo, só precisa ter os valores do parametros e o msm tipo */
-            //mock.Setup(x => x.ValidarCredito(It.IsAny<string>(), It.IsAny<decimal>())).Returns(true);
-            mock.Setup(x => x.ValidarCredito(It.IsAny<string>(), It.Is<decimal>(i => i < 5000))).Returns(true);
+            mock.Setup(x => x.ValidarCredito(It.IsAny<string>(), It.IsAny<decimal>())).Returns(true);
+            
             /*
              mock.Setup(x => x.ValidarCredito(It.IsAny<string>(), It.Is<decimal>(i => i < 5000))).Returns(true);
-            Somente ira passar funcionar se o valor for < que 5000
-            */
+             Somente ira passar funcionar se o valor for < que 5000 */
 
             conta.SetValidadorCredito(mock.Object);
-            conta.SolicitarEmprestimo(4000);
+            conta.SolicitarEmprestimo(5000);
 
-            Assert.IsTrue(conta.GetSaldo() == 4100);
+            Assert.IsTrue(conta.GetSaldo() == 5100);
         }
     }
 }

@@ -14,6 +14,7 @@
             saldo = _valor;
         }
 
+        #region Test unitarios
         public decimal Saldo()
         {
             return saldo;
@@ -35,7 +36,10 @@
             saldo -= valor;
             return true;
         }
+        #endregion Test unitarios
 
+
+        #region Test unitarios with MOQ
         //Injeção de Dependencia
         public void SetValidadorCredito(IValidadorCredito _validadorCredito)
         {
@@ -56,5 +60,6 @@
         {
             return saldo;
         }
+        #endregion Test unitarios with MoQ
     }
 }
