@@ -1,0 +1,4 @@
+Para instalar o Moq no projeto de test faça:
+
+* Clique com o btn direito do projeto de teste, Manage NuGet Packages...
+* Browse -> procure por Moq -> Install
